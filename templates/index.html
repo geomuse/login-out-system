@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>.</title>
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body class="bg">
+
+  <div class="content">
+    <div class="search-container">
+      <h1 class="RNNTitle" id="text"></h1>
+      <input class='user' type="search" id="inputNumber" placeholder="user">
+      <input class='password' type="search" id="inputNumber" placeholder="password" onkeydown="handleKeyPress(event)">
+    </div>
+  </div>
+
+  <script>
+    function handleKeyPress(event){
+      if (event.keyCode === 13){
+        alert('Hi,I\'m theo.')
+        }
+    }
+
+    var text = "development.";
+    var textElement = document.getElementById('text');
+    var i = 0;
+    var speed = 1000/2;
+
+    function typeWriter() {
+        if (i < text.length) {
+            textElement.innerHTML += text.charAt(i); i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    typeWriter();
+  </script>
+
+</body>
+</html>

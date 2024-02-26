@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>文字自动生成</title>
+  <style>
+    body {
+        text-align: center;
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      // 可选的文字库
+      var texts = [
+        "你好，世界！",
+        "这是一个文字自动生成的示例。",
+        "欢迎使用 JavaScript。"
+      ];
+
+      // 从文字库中随机选择一段文字
+      var randomIndex = Math.floor(Math.random() * texts.length);
+      var generatedText = texts[randomIndex];
+
+      // 将生成的文字显示在页面上
+      var textContainer = document.getElementById("generated-text");
+      textContainer.textContent = generatedText;
+    };
+  </script>
+</head>
+<body>
+  <h1>自动生成的文字：</h1>
+  <p id="generated-text"></p>
+</body>
+</html>
